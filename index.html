@@ -11,7 +11,11 @@
 <header>
   <nav>
     <div class="logo">L'UN DES<br><span>MIRACLES DE DIEU</span></div>
-    <a href="#contact">Contact</a>
+    <button id="nav-toggle" aria-label="Menu">☰</button>
+    <div class="nav-links">
+      <a href="#services">Nos services</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 </header>
 
@@ -46,17 +50,35 @@
   </div>
 </section>
 
+<!-- Petite galerie (structure nécessaire pour script.js) -->
+<section class="gallery">
+  <div class="cards">
+    <div class="gal-item card" tabindex="0">
+      <img src="" alt="Exemple de produit">
+      <h3>Exemple</h3>
+      <p>Cliquer pour agrandir</p>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contactez-nous</h2>
-  <p>📍 Cotonou, Bénin</p>
-  <p>📞 Téléphone : ajoutez vos numéros ici</p>
-  <p>📧 E-mail : ajoutez votre adresse ici</p>
-  <a class="btn" href="tel:0146301848">Appeler maintenant</a>
+  <p>📍 Adresse : [ADRESSE_PHYSIQUE]</p>
+  <p>📞 Téléphone : [NUMÉRO_TÉLÉPHONE]</p>
+  <p>💬 WhatsApp : [NUMÉRO_WHATSAPP]</p>
+  <p>📧 E-mail : [ADRESSE_EMAIL]</p>
+  <a class="btn" href="tel:[NUMÉRO_TÉLÉPHONE]">Appeler maintenant</a>
 </section>
 
 <footer>
   © 2026 L'un des Miracles de Dieu — Imprimerie & Création graphique
 </footer>
+
+<!-- Lightbox minimal (structure nécessaire pour script.js) -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="close" aria-label="Fermer">✕</button>
+  <img src="" alt="Agrandissement">
+</div>
 
 <script src="script.js"></script>
 </body>

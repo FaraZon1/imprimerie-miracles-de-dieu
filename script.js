@@ -30,12 +30,16 @@ if(galItems && lightbox){
   galItems.forEach(item=>{
     item.addEventListener('click', ()=>{
       const img=item.querySelector('img');
-      lbImg.src = img.src;
-      lightbox.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
+      if(img && lbImg){
+        lbImg.src = img.src;
+        lightbox.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
     });
     item.addEventListener('keypress', (e)=>{ if(e.key==='Enter') item.click(); });
   });
-  lbClose.addEventListener('click', ()=>{ lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow=''); });
-  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) { lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow=''; } });
+  if(lbClose){
+    lbClose.addEventListener('click', ()=>{ lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; });
+  }
+  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) { lightbox.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; } });
 }
